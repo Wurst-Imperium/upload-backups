@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Checkout this action
-      uses: actions/checkout@v5
-      with:
-        path: action
-
     - name: Checkout example mod
       uses: actions/checkout@v5
       with:
@@ -38,6 +33,11 @@ jobs:
 
     - name: Build
       run: ./gradlew build --stacktrace
+
+    - name: Checkout this action
+      uses: actions/checkout@v5
+      with:
+        path: action
 
     - name: Upload backups
       uses: ./action
