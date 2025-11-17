@@ -7,6 +7,10 @@ on:
     tags-ignore:
     - "**"
   # Can't run on pull_request because the API key won't be available on forks
+  schedule:
+    # cron: minute, hour, day of month, month, day of week
+    # Test every day at 5:00 AM to make sure the server is still up
+    - cron: "0 5 * * *"
   workflow_dispatch:
 
 jobs:
