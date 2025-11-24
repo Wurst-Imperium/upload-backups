@@ -19,7 +19,7 @@ jobs:
     steps:
 
     - name: Checkout example mod
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: FabricMC/fabric-example-mod
 
@@ -39,7 +39,7 @@ jobs:
       run: ./gradlew build --stacktrace
 
     - name: Checkout this action
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         path: action
 
